@@ -54,14 +54,14 @@ const Join: React.FC<
       }
 
       // blur background
-      if (enableBlurBackground) {
+      // if (enableBlurBackground) {
         engine?.enableVirtualBackground(true,
           {
              backgroundSourceType: BackgroundSourceType.Blur,
              blur_degree: BackgroundBlurDegree.Medium
            }
          );
-      }
+      // }
 
       const UID = rtcProps.uid || 0;
       if (rtcProps.tokenUrl) {
