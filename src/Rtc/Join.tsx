@@ -58,7 +58,8 @@ const Join: React.FC<
         engine?.enableVirtualBackground(true,
           {
              backgroundSourceType: BackgroundSourceType.Blur,
-             blur_degree: BackgroundBlurDegree.Medium
+             blur_degree: BackgroundBlurDegree.Medium,
+             color: 0xc0c0c0
            }
          );
       // }
