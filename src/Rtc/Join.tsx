@@ -55,8 +55,10 @@ const Join: React.FC<
 
       // blur background
       // if (enableBlurBackground) {
+
         engine?.enableVirtualBackground(true,
           {
+             background_source_type: BackgroundSourceType.Blur,
              backgroundSourceType: BackgroundSourceType.Blur,
              blur_degree: BackgroundBlurDegree.Medium,
              color: 0xc0c0c0
