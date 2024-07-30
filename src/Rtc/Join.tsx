@@ -54,18 +54,16 @@ const Join: React.FC<
       }
 
       // blur background
-      // if (enableBlurBackground) {
-
+      if (enableBlurBackground) {
         engine?.enableVirtualBackground(true,
           {
              background_source_type: BackgroundSourceType.BackgroundBlur,
-             backgroundSourceType: BackgroundSourceType.BackgroundBlur,
              blur_degree: BackgroundBlurDegree.BlurDegreeMedium,
-             color: 0xc0c0c0
+             color: 0xffffff
            },
            {}
          );
-      // }
+      }
 
       const UID = rtcProps.uid || 0;
       if (rtcProps.tokenUrl) {
