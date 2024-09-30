@@ -1,6 +1,6 @@
-import RtmClient from 'agora-react-native-rtm';
-import {RtmClientEvents} from 'agora-react-native-rtm/src/RtmEngine';
-import React, {createContext} from 'react';
+import RtmClient from 'agora-react-native-rtm-abi';
+import { RtmClientEvents } from 'agora-react-native-rtm-abi/src/RtmEngine';
+import React, { createContext } from 'react';
 
 /**
  * Callbacks to pass to RTM events

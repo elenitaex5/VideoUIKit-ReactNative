@@ -1,4 +1,4 @@
-import RtmEngine from 'agora-react-native-rtm';
+import RtmEngine from 'agora-react-native-rtm-abi';
 
 class RTMEngine {
   engine!: RtmEngine;

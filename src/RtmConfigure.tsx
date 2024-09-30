@@ -1,34 +1,35 @@
+import {
+  ConnectionChangeReason,
+  RtmChannelMember,
+  default as RtmClient,
+  RtmConnectionState,
+  default as RtmEngine,
+  RtmMessage,
+} from 'agora-react-native-rtm-abi';
+import { RtmClientEvents } from 'agora-react-native-rtm-abi/src/RtmEngine';
 import React, {
-  useState,
+  PropsWithChildren,
   useContext,
   useEffect,
   useRef,
-  PropsWithChildren,
+  useState,
 } from 'react';
-import RtmClient, {
-  ConnectionChangeReason,
-  RtmChannelMember,
-  RtmConnectionState,
-  RtmMessage,
-} from 'agora-react-native-rtm';
+import { Platform } from 'react-native';
+import { ClientRoleType } from 'react-native-agora';
+import { LocalContext } from './Contexts/LocalUserContext';
 import PropsContext from './Contexts/PropsContext';
+import RtcContext from './Contexts/RtcContext';
 import {
   RtmProvider,
+  messageObjectType,
   muteRequest as muteRequestType,
   mutingDevice,
+  popUpStateEnum,
   rtmStatusEnum,
   userDataType,
-  popUpStateEnum,
-  messageObjectType,
 } from './Contexts/RtmContext';
-import RtcContext from './Contexts/RtcContext';
-import {muteAudio} from './Controls/Local/LocalAudioMute';
-import {muteVideo} from './Controls/Local/LocalVideoMute';
-import {LocalContext} from './Contexts/LocalUserContext';
-import {Platform} from 'react-native';
-import RtmEngine from 'agora-react-native-rtm';
-import {RtmClientEvents} from 'agora-react-native-rtm/src/RtmEngine';
-import {ClientRoleType} from 'react-native-agora';
+import { muteAudio } from './Controls/Local/LocalAudioMute';
+import { muteVideo } from './Controls/Local/LocalVideoMute';
 import RTMEngine from './RTMEngine';
 
 /**
